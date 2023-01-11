@@ -1,11 +1,11 @@
 # Project Amazon RDS (PostgreSQL, MySQL, MariaDB, Oracle, Amazon Aurora (MySQL), Amazon Aurora (PostgreSQL))
 
-Проверка работы загрузки данных через проект Github (#CurrencyChartFX-Java-19-Maven)
+- Проверка работы загрузки данных через проект Github (#CurrencyChartFX-Java-19-Maven)
 
 ---------------------------------------------------------------------------------
-- PostgreSQL
+- PostgreSQL:
 
-1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
+- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
    -> Standard create
@@ -44,7 +44,7 @@
      -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-2) Добавляем маршрут для подключения
+- Добавляем маршрут для подключения
  RDS -> Databases
   -> выбираем postgresqldb
   -> выбираем Security - VPC security groups -> default (sg-****************)
@@ -54,14 +54,14 @@
      -> Source -> 0.0.0.0/0
   -> Save rules
 
-3) Подключение (DBeaver):
+- Подключение (DBeaver):
    - Хост: postgresqldb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 5432
    - База данных: postgres
    - Пользователь: postgres
    - Пароль: !Aa112233
 
-4) Добавление объектов
+- Добавление объектов:
    - под пользователем postgres:
      - .\sql\PostgeeSQL\1_CREATE_USER.sql
    - под пользователем testdb база данных postgres:
@@ -72,9 +72,9 @@
      - .\sql\PostgeeSQL\5_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- MySQL
+- MySQL:
 
-1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
+- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
    -> Standard create
@@ -114,7 +114,7 @@
      -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-2) Добавляем маршрут для подключения
+- Добавляем маршрут для подключения
  RDS -> Databases
   -> выбираем mysqldb
   -> выбираем Security - VPC security groups -> default (sg-****************)
@@ -124,14 +124,14 @@
      -> Source -> 0.0.0.0/0
   -> Save rules
 
-3) Подключение (DBeaver):
+- Подключение (DBeaver):
    - Хост: mysqldb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 3306
    - База данных:
    - Пользователь: admin
    - Пароль: !Aa112233
 
-4) Добавление объектов
+- Добавление объектов:
    - под пользователем admin:
      - .\sql\MySQL\1_CREATE_USER_AND_DATABASE.sql
    - под пользователем test_user, база данных testdb:
@@ -139,9 +139,9 @@
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- MariaDB
+- MariaDB:
 
-1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
+- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
    -> Standard create
@@ -181,7 +181,7 @@
      -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-2) Добавляем маршрут для подключения
+- Добавляем маршрут для подключения
  RDS -> Databases
   -> выбираем mariadb
   -> выбираем Security - VPC security groups -> default (sg-****************)
@@ -192,14 +192,14 @@
      -> Source -> 0.0.0.0/0
   -> Save rules
 
-3) Подключение (DBeaver):
+- Подключение (DBeaver):
    - Хост: mariadb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 3307
    - База данных:
    - Пользователь: admin
    - Пароль: !Aa112233
 
-4) Добавление объектов
+- Добавление объектов:
    - под пользователем admin:
      - .\sql\MariaDB\1_CREATE_USER_AND_DATABASE.sql
    - под пользователем test_user, база данных testdb:
@@ -207,9 +207,9 @@
      - .\sql\MariaDB\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- Oracle
+- Oracle:
 
-1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
+- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
    -> Standard create
@@ -246,7 +246,7 @@
      -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-2) Добавляем маршрут для подключения
+- Добавляем маршрут для подключения
  RDS -> Databases
   -> выбираем oracledb
   -> выбираем Security - VPC security groups -> default (sg-****************)
@@ -256,14 +256,14 @@
      -> Source -> 0.0.0.0/0
   -> Save rules
 
-3) Подключение (DBeaver):
+- Подключение (DBeaver):
    - Хост: oracledb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 1521
    - База данных: ORCL
    - Пользователь: admin
    - Пароль: !Aa112233
 
-4) Добавление объектов
+- Добавление объектов:
    - под пользователем admin:
      - .\sql\Oracle\1_CREATE_DATABASE_AND_USER.sql
    - под пользователем test_user:
@@ -271,9 +271,9 @@
      - .\sql\Oracle\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- Amazon Aurora (MySQL)
+- Amazon Aurora (MySQL):
 
-1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
+- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
    -> Standard create
@@ -314,7 +314,7 @@
      -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-2) Добавляем маршрут для подключения
+- Добавляем маршрут для подключения
  RDS -> Databases
   -> выбираем auroramysqldb
   -> выбираем Security - VPC security groups -> default (sg-****************)
@@ -325,14 +325,14 @@
      -> Source -> 0.0.0.0/0
   -> Save rules
 
-3) Подключение (DBeaver):
+- Подключение (DBeaver):
    - Хост: auroramysqldb-instance-1.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 3308
    - База данных:
    - Пользователь: admin
    - Пароль: !Aa112233
 
-4) Добавление объектов
+- Добавление объектов:
    - под пользователем admin:
      - .\sql\MySQL\1_CREATE_USER_AND_DATABASE.sql
    - под пользователем test_user, база данных testdb:
@@ -340,9 +340,9 @@
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- Amazon Aurora (PostgreSQL)
+- Amazon Aurora (PostgreSQL):
 
-1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
+- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
    -> Standard create
@@ -383,7 +383,7 @@
      -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-2) Добавляем маршрут для подключения
+- Добавляем маршрут для подключения
  RDS -> Databases
   -> выбираем aurorapostgresqldb
   -> выбираем Security - VPC security groups -> default (sg-****************)
@@ -394,14 +394,14 @@
      -> Source -> 0.0.0.0/0
   -> Save rules
 
-3) Подключение (DBeaver):
+- Подключение (DBeaver):
    - Хост: aurorapostgresqldb-instance-1.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 5433
    - База данных: postgres
    - Пользователь: postgres
    - Пароль: !Aa112233
 
-4) Добавление объектов
+- Добавление объектов:
    - под пользователем postgres:
      - .\sql\PostgeeSQL\1_CREATE_USER.sql
    - под пользователем testdb база данных postgres:
