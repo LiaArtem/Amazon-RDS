@@ -1,8 +1,9 @@
 # Project Amazon RDS (PostgreSQL, MySQL, MariaDB, Oracle, Amazon Aurora (MySQL), Amazon Aurora (PostgreSQL))
 
-- Проверка работы загрузки данных через проект Github (#CurrencyChartFX-Java-19-Maven)
+Проверка работы загрузки данных через проект Github (#CurrencyChartFX-Java-19-Maven)
 
-- PostgreSQL:
+---------------------------------------------------------------------------------
+PostgreSQL
 ---------------------------------------------------------------------------------
 
 - Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
