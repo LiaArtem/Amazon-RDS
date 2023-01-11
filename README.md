@@ -5,7 +5,6 @@
 ---------------------------------------------------------------------------------
 PostgreSQL
 ---------------------------------------------------------------------------------
-
 - Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
    - Standard create
@@ -43,11 +42,11 @@ PostgreSQL
 
 - Добавляем маршрут для подключения RDS - Databases:
   - выбираем postgresqldb
-  - выбираем Security - VPC security groups -> default (sg-****************)
-  - Inbound rules -> Edit inbound rules
+  - выбираем Security - VPC security groups - default (sg-****************)
+  - Inbound rules - Edit inbound rules
   - Add rule:
-     - Type -> PostgreSQL
-     - Source -> 0.0.0.0/0
+     - Type - PostgreSQL
+     - Source - 0.0.0.0/0
   - Save rules
 
 - Подключение (DBeaver):
@@ -68,57 +67,52 @@ PostgreSQL
      - .\sql\PostgeeSQL\5_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- MySQL:
-
-- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
- RDS -> Create database:
+MySQL
+---------------------------------------------------------------------------------
+- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
-   -> Standard create
+   - Standard create
  - Engine options:
-   -> Engine type -> MySQL
-   -> Edition -> MySQL Community
-   -> Engine Version -> MySQL 8.0.31
+   - Engine type - MySQL
+   - Edition - MySQL Community
+   - Engine Version - MySQL 8.0.31
  - Templates:
-   -> Free tier
- - Availability and durability:
-     (default)
+   - Free tier
+ - Availability and durability: (default)
  - Settings:
-   -> DB instance identifier -> mysqldb
-   -> Credentials Settings:
-     -> Master username -> admin
-     -> Master password -> !Aa112233
-     -> Confirm master password -> !Aa112233
- - Instance configuration:
-     (default)
- - Storage:
-     (default)
+   - DB instance identifier - mysqldb
+   - Credentials Settings:
+     - Master username - admin
+     - Master password - !Aa112233
+     - Confirm master password - !Aa112233
+ - Instance configuration: (default)
+ - Storage: (default)
  - Connectivity:
-   -> Compute resource -> Don’t connect to an EC2 compute resource
-   -> Network type -> IPv4
-   -> Virtual private cloud (VPC) -> Default VPC
-   -> DB Subnet group -> default
-   -> Public access -> Yes
-   -> VPC security group (firewall) -> Choose existing
+   - Compute resource - Don’t connect to an EC2 compute resource
+   - Network type - IPv4
+   - Virtual private cloud (VPC) - Default VPC
+   - DB Subnet group - default
+   - Public access - Yes
+   - VPC security group (firewall) - Choose existing
  - Database authentication:
-   -> Database authentication options -> Password authentication
+   - Database authentication options - Password authentication
  - Monitoring:
-   -> Performance Insights -> Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
  - Additional configuration:
-   -> Database options:
-     -> Initial database name -> testdb (!!! если нужно сразу создать отдельную базу данных)
+   - Database options:
+     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
    - Backup:
-     -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-- Добавляем маршрут для подключения
- RDS -> Databases
-  -> выбираем mysqldb
-  -> выбираем Security - VPC security groups -> default (sg-****************)
-  -> Inbound rules -> Edit inbound rules
-  -> Add rule:
-     -> Type -> MySQL/Aurora
-     -> Source -> 0.0.0.0/0
-  -> Save rules
+- Добавляем маршрут для подключения RDS - Databases
+  - выбираем mysqldb
+  - выбираем Security - VPC security groups - default (sg-****************)
+  - Inbound rules - Edit inbound rules
+  - Add rule:
+     - Type - MySQL/Aurora
+     - Source - 0.0.0.0/0
+  - Save rules
 
 - Подключение (DBeaver):
    - Хост: mysqldb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
@@ -135,58 +129,53 @@ PostgreSQL
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- MariaDB:
-
-- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
- RDS -> Create database:
+MariaDB
+---------------------------------------------------------------------------------
+- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
-   -> Standard create
+   - Standard create
  - Engine options:
-   -> Engine type -> MariaDB
-   -> Engine Version -> MariaDB 10.6.11
+   - Engine type - MariaDB
+   - Engine Version - MariaDB 10.6.11
  - Templates:
-   -> Free tier
- - Availability and durability:
-     (default)
+   - Free tier
+ - Availability and durability: (default)
  - Settings:
-   -> DB instance identifier -> mariadb
-   -> Credentials Settings:
-     -> Master username -> admin
-     -> Master password -> !Aa112233
-     -> Confirm master password -> !Aa112233
- - Instance configuration:
-     (default)
- - Storage:
-     (default)
+   - DB instance identifier - mariadb
+   - Credentials Settings:
+     - Master username - admin
+     - Master password - !Aa112233
+     - Confirm master password - !Aa112233
+ - Instance configuration: (default)
+ - Storage: (default)
  - Connectivity:
-   -> Compute resource -> Don’t connect to an EC2 compute resource
-   -> Network type -> IPv4
-   -> Virtual private cloud (VPC) -> Default VPC
-   -> DB Subnet group -> default
-   -> Public access -> Yes
-   -> VPC security group (firewall) -> Choose existing
-   -> Additional configuration -> Database port -> 3307   !!!!
+   - Compute resource - Don’t connect to an EC2 compute resource
+   - Network type - IPv4
+   - Virtual private cloud (VPC) - Default VPC
+   - DB Subnet group - default
+   - Public access - Yes
+   - VPC security group (firewall) - Choose existing
+   - Additional configuration - Database port - 3307   !!!!
  - Database authentication:
-   -> Database authentication options -> Password authentication
+   - Database authentication options - Password authentication
  - Monitoring:
-   -> Performance Insights -> Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
  - Additional configuration:
-   -> Database options:
-     -> Initial database name -> testdb (!!! если нужно сразу создать отдельную базу данных)
+   - Database options:
+     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
    - Backup:
-     -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-- Добавляем маршрут для подключения
- RDS -> Databases
-  -> выбираем mariadb
-  -> выбираем Security - VPC security groups -> default (sg-****************)
-  -> Inbound rules -> Edit inbound rules
-  -> Add rule:
-     -> Type -> Custom IP
-     -> Port -> 3307
-     -> Source -> 0.0.0.0/0
-  -> Save rules
+- Добавляем маршрут для подключения RDS - Databases
+  - выбираем mariadb
+  - выбираем Security - VPC security groups - default (sg-****************)
+  - Inbound rules - Edit inbound rules
+  - Add rule:
+     - Type - Custom IP
+     - Port - 3307
+     - Source - 0.0.0.0/0
+  - Save rules
 
 - Подключение (DBeaver):
    - Хост: mariadb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
@@ -203,54 +192,50 @@ PostgreSQL
      - .\sql\MariaDB\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- Oracle:
-
-- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
- RDS -> Create database:
+- Oracle
+---------------------------------------------------------------------------------
+- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
-   -> Standard create
+   - Standard create
  - Engine options:
-   -> Engine type -> Oracle
-   -> Edition -> (default)
+   - Engine type - Oracle
+   - Edition - (default)
  - Templates:
-   -> Dev/Test
+   - Dev/Test
  - Settings:
-   -> DB instance identifier -> oracledb
-   -> Credentials Settings:
-     -> Master username -> admin
-     -> Master password -> !Aa112233
-     -> Confirm master password -> !Aa112233
- - Instance configuration:
-     (default)
- - Storage:
-     (default)
+   - DB instance identifier - oracledb
+   - Credentials Settings:
+     - Master username - admin
+     - Master password - !Aa112233
+     - Confirm master password - !Aa112233
+ - Instance configuration: (default)
+ - Storage: (default)
  - Connectivity:
-   -> Compute resource -> Don’t connect to an EC2 compute resource
-   -> Network type -> IPv4
-   -> Virtual private cloud (VPC) -> Default VPC
-   -> DB Subnet group -> default
-   -> Public access -> Yes
-   -> VPC security group (firewall) -> Choose existing
+   - Compute resource - Don’t connect to an EC2 compute resource
+   - Network type - IPv4
+   - Virtual private cloud (VPC) - Default VPC
+   - DB Subnet group - default
+   - Public access - Yes
+   - VPC security group (firewall) - Choose existing
  - Database authentication:
-   -> Database authentication options -> Password authentication
+   - Database authentication options - Password authentication
  - Monitoring:
-   -> Performance Insights -> Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
  - Additional configuration:
-   -> Database options:
-     -> Initial database name -> testdb (!!! если нужно сразу создать отдельную базу данных)
+   - Database options:
+     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
    - Backup:
-     -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-- Добавляем маршрут для подключения
- RDS -> Databases
-  -> выбираем oracledb
-  -> выбираем Security - VPC security groups -> default (sg-****************)
-  -> Inbound rules -> Edit inbound rules
-  -> Add rule:
-     -> Type -> Oracle-RDS
-     -> Source -> 0.0.0.0/0
-  -> Save rules
+- Добавляем маршрут для подключения RDS - Databases
+  - выбираем oracledb
+  - выбираем Security - VPC security groups - default (sg-****************)
+  - Inbound rules - Edit inbound rules
+  - Add rule:
+     - Type - Oracle-RDS
+     - Source - 0.0.0.0/0
+  - Save rules
 
 - Подключение (DBeaver):
    - Хост: oracledb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
@@ -267,59 +252,54 @@ PostgreSQL
      - .\sql\Oracle\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- Amazon Aurora (MySQL):
-
-- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
- RDS -> Create database:
+- Amazon Aurora (MySQL)
+---------------------------------------------------------------------------------
+- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
-   -> Standard create
+   - Standard create
  - Engine options:
-   -> Engine type -> Amazon Aurora
-   -> Edition -> Amazon Aurora MySQL-Compatible Edition
-   -> Engine Version -> Aurora MySQL 3.02.2 (combatible with MySQL 8.0.23)
+   - Engine type - Amazon Aurora
+   - Edition - Amazon Aurora MySQL-Compatible Edition
+   - Engine Version - Aurora MySQL 3.02.2 (combatible with MySQL 8.0.23)
  - Templates:
-   -> Dev/Test
- - Availability and durability:
-     (default)
+   - Dev/Test
+ - Availability and durability: (default)
  - Settings:
-   -> DB instance identifier -> auroramysqldb
-   -> Credentials Settings:
-     -> Master username -> admin
-     -> Master password -> !Aa112233
-     -> Confirm master password -> !Aa112233
- - Instance configuration:
-     (default)
- - Storage:
-     (default)
+   - DB instance identifier - auroramysqldb
+   - Credentials Settings:
+     - Master username - admin
+     - Master password - !Aa112233
+     - Confirm master password - !Aa112233
+ - Instance configuration: (default)
+ - Storage: (default)
  - Connectivity:
-   -> Compute resource -> Don’t connect to an EC2 compute resource
-   -> Network type -> IPv4
-   -> Virtual private cloud (VPC) -> Default VPC
-   -> DB Subnet group -> default
-   -> Public access -> Yes
-   -> VPC security group (firewall) -> Choose existing
-   -> Additional configuration -> Database port -> 3308   !!!!
+   - Compute resource - Don’t connect to an EC2 compute resource
+   - Network type - IPv4
+   - Virtual private cloud (VPC) - Default VPC
+   - DB Subnet group - default
+   - Public access - Yes
+   - VPC security group (firewall) - Choose existing
+   - Additional configuration - Database port - 3308   !!!!
  - Database authentication:
-   -> Database authentication options -> Password authentication
+   - Database authentication options - Password authentication
  - Monitoring:
-   -> Performance Insights -> Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
  - Additional configuration:
-   -> Database options:
-     -> Initial database name -> testdb (!!! если нужно сразу создать отдельную базу данных)
+   - Database options:
+     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
    - Backup:
-     -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-- Добавляем маршрут для подключения
- RDS -> Databases
-  -> выбираем auroramysqldb
-  -> выбираем Security - VPC security groups -> default (sg-****************)
-  -> Inbound rules -> Edit inbound rules
-  -> Add rule:
-     -> Type -> Custom IP
-     -> Port -> 3308
-     -> Source -> 0.0.0.0/0
-  -> Save rules
+- Добавляем маршрут для подключения RDS - Databases
+  - выбираем auroramysqldb
+  - выбираем Security - VPC security groups - default (sg-****************)
+  - Inbound rules - Edit inbound rules
+  - Add rule:
+     - Type - Custom IP
+     - Port - 3308
+     - Source - 0.0.0.0/0
+  - Save rules
 
 - Подключение (DBeaver):
    - Хост: auroramysqldb-instance-1.c5bnmatchwcd.us-east-1.rds.amazonaws.com
@@ -336,59 +316,54 @@ PostgreSQL
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-- Amazon Aurora (PostgreSQL):
-
-- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
- RDS -> Create database:
+- Amazon Aurora (PostgreSQL)
+---------------------------------------------------------------------------------
+- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
-   -> Standard create
+   - Standard create
  - Engine options:
-   -> Engine type -> Amazon Aurora
-   -> Edition -> Amazon Aurora PostgreSQL-Compatible Edition
-   -> Engine Version -> Aurora PostgreSQL (Combatible with PostgreSQL 14.5)
+   - Engine type - Amazon Aurora
+   - Edition - Amazon Aurora PostgreSQL-Compatible Edition
+   - Engine Version - Aurora PostgreSQL (Combatible with PostgreSQL 14.5)
  - Templates:
-   -> Free tier
- - Availability and durability:
-     (default)
+   - Free tier
+ - Availability and durability: (default)
  - Settings:
-   -> DB instance identifier -> aurorapostgresqldb
-   -> Credentials Settings:
-     -> Master username -> postgres
-     -> Master password -> !Aa112233
-     -> Confirm master password -> !Aa112233
- - Instance configuration:
-     (default)
- - Storage:
-     (default)
+   - DB instance identifier - aurorapostgresqldb
+   - Credentials Settings:
+     - Master username - postgres
+     - Master password - !Aa112233
+     - Confirm master password - !Aa112233
+ - Instance configuration: (default)
+ - Storage: (default)
  - Connectivity:
-   -> Compute resource -> Don’t connect to an EC2 compute resource
-   -> Network type -> IPv4
-   -> Virtual private cloud (VPC) -> Default VPC
-   -> DB Subnet group -> default
-   -> Public access -> Yes
-   -> VPC security group (firewall) -> Choose existing
-   -> Additional configuration -> Database port -> 5433   !!!!
+   - Compute resource - Don’t connect to an EC2 compute resource
+   - Network type - IPv4
+   - Virtual private cloud (VPC) - Default VPC
+   - DB Subnet group - default
+   - Public access - Yes
+   - VPC security group (firewall) - Choose existing
+   - Additional configuration - Database port - 5433   !!!!
  - Database authentication:
-   -> Database authentication options -> Password authentication
+   - Database authentication options - Password authentication
  - Monitoring:
-   -> Performance Insights -> Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
  - Additional configuration:
-   -> Database options:
-     -> Initial database name -> testdb (!!! если нужно сразу создать отдельную базу данных)
+   - Database options:
+     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
    - Backup:
-     -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-- Добавляем маршрут для подключения
- RDS -> Databases
-  -> выбираем aurorapostgresqldb
-  -> выбираем Security - VPC security groups -> default (sg-****************)
-  -> Inbound rules -> Edit inbound rules
-  -> Add rule:
-     -> Type -> Custom IP
-     -> Port -> 5433
-     -> Source -> 0.0.0.0/0
-  -> Save rules
+- Добавляем маршрут для подключения RDS - Databases
+  - выбираем aurorapostgresqldb
+  - выбираем Security - VPC security groups - default (sg-****************)
+  - Inbound rules - Edit inbound rules
+  - Add rule:
+     - Type - Custom IP
+     - Port - 5433
+     - Source - 0.0.0.0/0
+  - Save rules
 
 - Подключение (DBeaver):
    - Хост: aurorapostgresqldb-instance-1.c5bnmatchwcd.us-east-1.rds.amazonaws.com
