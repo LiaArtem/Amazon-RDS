@@ -5,54 +5,49 @@
 ---------------------------------------------------------------------------------
 - PostgreSQL:
 
-- Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
- RDS -> Create database:
+- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
-   -> Standard create
+   - Standard create
  - Engine options:
-   -> Engine type -> PostgreSQL
-   -> Engine Version -> PostgreSQL 14.5-R1
+   - Engine type - PostgreSQL
+   - Engine Version - PostgreSQL 14.5-R1
  - Templates:
-   -> Free tier
- - Availability and durability:
-     (default)
+   - Free tier
+ - Availability and durability: (default)
  - Settings:
-   -> DB instance identifier -> postgresqldb
-   -> Credentials Settings:
-     -> Master username -> postgres
-     -> Master password -> !Aa112233
-     -> Confirm master password -> !Aa112233
- - Instance configuration:
-     (default)
- - Storage:
-     (default)
+   - DB instance identifier - postgresqldb
+   - Credentials Settings:
+     - Master username - postgres
+     - Master password - !Aa112233
+     - Confirm master password - !Aa112233
+ - Instance configuration: (default)
+ - Storage: (default)
  - Connectivity:
-   -> Compute resource -> Don’t connect to an EC2 compute resource
-   -> Network type -> IPv4
-   -> Virtual private cloud (VPC) -> Default VPC
-   -> DB Subnet group -> default
-   -> Public access -> Yes
-   -> VPC security group (firewall) -> Choose existing
+   - Compute resource - Don’t connect to an EC2 compute resource
+   - Network type - IPv4
+   - Virtual private cloud (VPC) - Default VPC
+   - DB Subnet group - default
+   - Public access - Yes
+   - VPC security group (firewall) - Choose existing
  - Database authentication:
-   -> Database authentication options -> Password authentication
+   - Database authentication options - Password authentication
  - Monitoring:
-   -> Performance Insights -> Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
  - Additional configuration:
-   -> Database options:
-     -> Initial database name -> testdb (!!! если нужно сразу создать отдельную базу данных)
+   - Database options:
+     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
    - Backup:
-     -> Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
  - Create database
 
-- Добавляем маршрут для подключения
- RDS -> Databases
-  -> выбираем postgresqldb
-  -> выбираем Security - VPC security groups -> default (sg-****************)
-  -> Inbound rules -> Edit inbound rules
-  -> Add rule:
-     -> Type -> PostgreSQL
-     -> Source -> 0.0.0.0/0
-  -> Save rules
+- Добавляем маршрут для подключения RDS - Databases:
+  - выбираем postgresqldb
+  - выбираем Security - VPC security groups -> default (sg-****************)
+  - Inbound rules -> Edit inbound rules
+  - Add rule:
+     - Type -> PostgreSQL
+     - Source -> 0.0.0.0/0
+  - Save rules
 
 - Подключение (DBeaver):
    - Хост: postgresqldb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
