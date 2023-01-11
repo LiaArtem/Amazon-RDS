@@ -2,8 +2,9 @@
 
 Проверка работы загрузки данных через проект Github (#CurrencyChartFX-Java-19-Maven)
 
-- PostgreSQL
 ---------------------------------------------------------------------------------
+- PostgreSQL
+
 1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
@@ -70,8 +71,9 @@
      - .\sql\PostgeeSQL\4_CREATE TABLE AND VIEW.sql
      - .\sql\PostgeeSQL\5_CREATE PROCEDURE.sql
 
-- MySQL
 ---------------------------------------------------------------------------------
+- MySQL
+
 1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
@@ -136,8 +138,9 @@
      - .\sql\MySQL\2_CREATE TABLE AND VIEW.sql
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
-- MariaDB
 ---------------------------------------------------------------------------------
+- MariaDB
+
 1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
@@ -203,8 +206,9 @@
      - .\sql\MariaDB\2_CREATE TABLE AND VIEW.sql
      - .\sql\MariaDB\3_CREATE PROCEDURE.sql
 
-- Oracle
 ---------------------------------------------------------------------------------
+- Oracle
+
 1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
@@ -266,8 +270,9 @@
      - .\sql\Oracle\2_CREATE TABLE AND VIEW.sql
      - .\sql\Oracle\3_CREATE PROCEDURE.sql
 
-- Amazon Aurora (MySQL)
 ---------------------------------------------------------------------------------
+- Amazon Aurora (MySQL)
+
 1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
@@ -334,8 +339,9 @@
      - .\sql\MySQL\2_CREATE TABLE AND VIEW.sql
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
-- Amazon Aurora (PostgreSQL)
 ---------------------------------------------------------------------------------
+- Amazon Aurora (PostgreSQL)
+
 1) Создание базы данных (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:)
  RDS -> Create database:
  - Choose a database creation method:
