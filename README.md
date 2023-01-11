@@ -2,8 +2,8 @@
 
 - Проверка работы загрузки данных через проект Github (#CurrencyChartFX-Java-19-Maven)
 
----------------------------------------------------------------------------------
 - PostgreSQL:
+---------------------------------------------------------------------------------
 
 - Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
