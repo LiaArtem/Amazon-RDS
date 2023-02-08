@@ -192,7 +192,7 @@ MariaDB
      - .\sql\MariaDB\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-Oracle
+Oracle (!!!! платно 0.342 $ час)
 ---------------------------------------------------------------------------------
 - Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
@@ -252,7 +252,7 @@ Oracle
      - .\sql\Oracle\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-Amazon Aurora (MySQL)
+Amazon Aurora (MySQL) (!!!! платно 1.038 $ час)
 ---------------------------------------------------------------------------------
 - Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
@@ -316,7 +316,7 @@ Amazon Aurora (MySQL)
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
-Amazon Aurora (PostgreSQL)
+Amazon Aurora (PostgreSQL) (!!!! платно 1.038 $ час)
 ---------------------------------------------------------------------------------
 - Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
