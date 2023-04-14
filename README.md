@@ -1,11 +1,11 @@
 # Project Amazon RDS (PostgreSQL, MySQL, MariaDB, Oracle, Amazon Aurora (MySQL), Amazon Aurora (PostgreSQL))
 
-Проверка работы загрузки данных через проект Github (#CurrencyChartFX-Java-19-Maven)
+Перевірка роботи завантаження даних через проект Github (#CurrencyChartFX-Java-19-Maven)
 
 ---------------------------------------------------------------------------------
 PostgreSQL
 ---------------------------------------------------------------------------------
-- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
+- Створення бази даних RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
    - Standard create
  - Engine options:
@@ -31,37 +31,37 @@ PostgreSQL
    - VPC security group (firewall) - Choose existing
  - Database authentication:
    - Database authentication options - Password authentication
- - Monitoring:
-   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+- Monitoring:
+   - Performance Insights - Turn on Performance Insights (OFF)!!!! (7 днів безкоштовно, але далі платно)
  - Additional configuration:
    - Database options:
-     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
+     - Initial database name - testdb (!!! якщо потрібно одразу створити окрему базу даних)
    - Backup:
-     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF)!!!! (Для тесту мені не потрібно)
  - Create database
 
-- Добавляем маршрут для подключения RDS - Databases:
-  - выбираем postgresqldb
-  - выбираем Security - VPC security groups - default (sg-****************)
+- Додаємо маршрут для підключення RDS - Databases:
+  - вибираємо postgresqldb
+  - вибираємо Security - VPC security groups - default (sg-****************)
   - Inbound rules - Edit inbound rules
   - Add rule:
      - Type - PostgreSQL
      - Source - 0.0.0.0/0
   - Save rules
 
-- Подключение (DBeaver):
+- Підключення (DBeaver):
    - Хост: postgresqldb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 5432
-   - База данных: postgres
-   - Пользователь: postgres
+   - База даних: postgres
+   - Користувач: postgres
    - Пароль: !Aa112233
 
-- Добавление объектов:
-   - под пользователем postgres:
+- Додавання об'єктів:
+   - під користувачем postgres:
      - .\sql\PostgeeSQL\1_CREATE_USER.sql
-   - под пользователем testdb база данных postgres:
+   - під користувачем testdb база даних postgres:
      - .\sql\PostgeeSQL\2_CREATE_DATABASE.sql
-   - под пользователем testdb база данных testdb:
+   - під користувачем testdb база даних testdb:
      - .\sql\PostgeeSQL\3_CREATE_SCHEMAS.sql
      - .\sql\PostgeeSQL\4_CREATE TABLE AND VIEW.sql
      - .\sql\PostgeeSQL\5_CREATE PROCEDURE.sql
@@ -69,7 +69,7 @@ PostgreSQL
 ---------------------------------------------------------------------------------
 MySQL
 ---------------------------------------------------------------------------------
-- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
+- Створення бази даних RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
    - Standard create
  - Engine options:
@@ -97,41 +97,41 @@ MySQL
  - Database authentication:
    - Database authentication options - Password authentication
  - Monitoring:
-   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 днів безкоштовно, але далі платно)
  - Additional configuration:
    - Database options:
-     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
+     - Initial database name - testdb (!!! Якщо потрібно відразу створити окрему базу даних)
    - Backup:
-     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для тесту мені не потрібно)
  - Create database
 
-- Добавляем маршрут для подключения RDS - Databases
-  - выбираем mysqldb
-  - выбираем Security - VPC security groups - default (sg-****************)
+- Додаємо маршрут для підключення RDS - Databases
+  - вибираємо mysqldb
+  - вибираємо Security - VPC security groups - default (sg-****************)
   - Inbound rules - Edit inbound rules
   - Add rule:
      - Type - MySQL/Aurora
      - Source - 0.0.0.0/0
   - Save rules
 
-- Подключение (DBeaver):
+- Підключення (DBeaver):
    - Хост: mysqldb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 3306
-   - База данных:
-   - Пользователь: admin
+   - База даних:
+   - Користувач: admin
    - Пароль: !Aa112233
 
-- Добавление объектов:
-   - под пользователем admin:
+- Додавання об'єктів:
+   - під користувачем admin:
      - .\sql\MySQL\1_CREATE_USER_AND_DATABASE.sql
-   - под пользователем test_user, база данных testdb:
+   - під користувачем test_user, база даних testdb:
      - .\sql\MySQL\2_CREATE TABLE AND VIEW.sql
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
 MariaDB
 ---------------------------------------------------------------------------------
-- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
+- Створення бази даних RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
    - Standard create
  - Engine options:
@@ -159,17 +159,17 @@ MariaDB
  - Database authentication:
    - Database authentication options - Password authentication
  - Monitoring:
-   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 днів безкоштовно, але далі платно)
  - Additional configuration:
    - Database options:
-     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
+     - Initial database name - testdb (!!! Якщо потрібно відразу створити окрему базу даних)
    - Backup:
-     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для тесту мені не потрібно)
  - Create database
 
-- Добавляем маршрут для подключения RDS - Databases
-  - выбираем mariadb
-  - выбираем Security - VPC security groups - default (sg-****************)
+- Додаємо маршрут для підключення RDS - Databases
+  - вибираємо mariadb
+  - вибираємо Security - VPC security groups - default (sg-****************)
   - Inbound rules - Edit inbound rules
   - Add rule:
      - Type - Custom IP
@@ -177,24 +177,24 @@ MariaDB
      - Source - 0.0.0.0/0
   - Save rules
 
-- Подключение (DBeaver):
+- Підключення (DBeaver):
    - Хост: mariadb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 3307
-   - База данных:
-   - Пользователь: admin
+   - База даних:
+   - Користувач: admin
    - Пароль: !Aa112233
 
-- Добавление объектов:
-   - под пользователем admin:
+- Додавання об'єктів:
+   - під користувачем admin:
      - .\sql\MariaDB\1_CREATE_USER_AND_DATABASE.sql
-   - под пользователем test_user, база данных testdb:
+   - під користувачем test_user, база даних testdb:
      - .\sql\MariaDB\2_CREATE TABLE AND VIEW.sql
      - .\sql\MariaDB\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
 Oracle (!!!! платно 0.342 $ час)
 ---------------------------------------------------------------------------------
-- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
+- Створення бази даних RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
    - Standard create
  - Engine options:
@@ -220,41 +220,41 @@ Oracle (!!!! платно 0.342 $ час)
  - Database authentication:
    - Database authentication options - Password authentication
  - Monitoring:
-   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 днів безкоштовно, але далі платно)
  - Additional configuration:
    - Database options:
-     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
+     - Initial database name - testdb (!!! Якщо потрібно відразу створити окрему базу даних)
    - Backup:
-     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для тесту мені не потрібно)
  - Create database
 
-- Добавляем маршрут для подключения RDS - Databases
-  - выбираем oracledb
-  - выбираем Security - VPC security groups - default (sg-****************)
+- Додаємо маршрут для підключення RDS - Databases
+  - вибираємо oracledb
+  - вибираємо Security - VPC security groups - default (sg-****************)
   - Inbound rules - Edit inbound rules
   - Add rule:
      - Type - Oracle-RDS
      - Source - 0.0.0.0/0
   - Save rules
 
-- Подключение (DBeaver):
+- Підключення (DBeaver):
    - Хост: oracledb.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 1521
-   - База данных: ORCL
-   - Пользователь: admin
+   - База даних: ORCL
+   - Користувач: admin
    - Пароль: !Aa112233
 
-- Добавление объектов:
-   - под пользователем admin:
+- Додавання об'єктів:
+   - під користувачем admin:
      - .\sql\Oracle\1_CREATE_DATABASE_AND_USER.sql
-   - под пользователем test_user:
+   - під користувачем test_user:
      - .\sql\Oracle\2_CREATE TABLE AND VIEW.sql
      - .\sql\Oracle\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
 Amazon Aurora (MySQL) (!!!! платно 1.038 $ час)
 ---------------------------------------------------------------------------------
-- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
+- Створення бази даних RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
    - Standard create
  - Engine options:
@@ -283,17 +283,17 @@ Amazon Aurora (MySQL) (!!!! платно 1.038 $ час)
  - Database authentication:
    - Database authentication options - Password authentication
  - Monitoring:
-   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 днів безкоштовно, але далі платно)
  - Additional configuration:
    - Database options:
-     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
+     - Initial database name - testdb (!!! Якщо потрібно відразу створити окрему базу даних)
    - Backup:
-     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для тесту мені не потрібно)
  - Create database
 
-- Добавляем маршрут для подключения RDS - Databases
-  - выбираем auroramysqldb
-  - выбираем Security - VPC security groups - default (sg-****************)
+- Додаємо маршрут для підключення RDS - Databases
+  - вибираємо auroramysqldb
+  - вибираємо Security - VPC security groups - default (sg-****************)
   - Inbound rules - Edit inbound rules
   - Add rule:
      - Type - Custom IP
@@ -301,24 +301,24 @@ Amazon Aurora (MySQL) (!!!! платно 1.038 $ час)
      - Source - 0.0.0.0/0
   - Save rules
 
-- Подключение (DBeaver):
+- Підключення (DBeaver):
    - Хост: auroramysqldb-instance-1.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 3308
-   - База данных:
-   - Пользователь: admin
+   - База даних:
+   - Користувач: admin
    - Пароль: !Aa112233
 
-- Добавление объектов:
-   - под пользователем admin:
+- Додавання об'єктів:
+   - під користувачем admin:
      - .\sql\MySQL\1_CREATE_USER_AND_DATABASE.sql
-   - под пользователем test_user, база данных testdb:
+   - під користувачем test_user, база даних testdb:
      - .\sql\MySQL\2_CREATE TABLE AND VIEW.sql
      - .\sql\MySQL\3_CREATE PROCEDURE.sql
 
 ---------------------------------------------------------------------------------
 Amazon Aurora (PostgreSQL) (!!!! платно 1.038 $ час)
 ---------------------------------------------------------------------------------
-- Создание базы данных RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
+- Створення бази даних RDS - Create database (https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#databases:):
  - Choose a database creation method:
    - Standard create
  - Engine options:
@@ -347,17 +347,17 @@ Amazon Aurora (PostgreSQL) (!!!! платно 1.038 $ час)
  - Database authentication:
    - Database authentication options - Password authentication
  - Monitoring:
-   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 дней бесплатно, но далее платно)
+   - Performance Insights - Turn on Performance Insights (OFF) !!!! (7 днів безкоштовно, але далі платно)
  - Additional configuration:
    - Database options:
-     - Initial database name - testdb (!!! если нужно сразу создать отдельную базу данных)
+     - Initial database name - testdb (!!! Якщо потрібно відразу створити окрему базу даних)
    - Backup:
-     - Enable automated backups (OFF) !!!! (Для теста мне не нужно)
+     - Enable automated backups (OFF) !!!! (Для тесту мені не потрібно)
  - Create database
 
-- Добавляем маршрут для подключения RDS - Databases
-  - выбираем aurorapostgresqldb
-  - выбираем Security - VPC security groups - default (sg-****************)
+- Додаємо маршрут для підключення RDS - Databases
+  - вибираємо aurorapostgresqldb
+  - вибираємо Security - VPC security groups - default (sg-****************)
   - Inbound rules - Edit inbound rules
   - Add rule:
      - Type - Custom IP
@@ -365,19 +365,19 @@ Amazon Aurora (PostgreSQL) (!!!! платно 1.038 $ час)
      - Source - 0.0.0.0/0
   - Save rules
 
-- Подключение (DBeaver):
+- Підключення (DBeaver):
    - Хост: aurorapostgresqldb-instance-1.c5bnmatchwcd.us-east-1.rds.amazonaws.com
    - Порт: 5433
-   - База данных: postgres
-   - Пользователь: postgres
+   - База даних: postgres
+   - Користувач: postgres
    - Пароль: !Aa112233
 
-- Добавление объектов:
-   - под пользователем postgres:
+- Додавання об'єктів:
+   - під користувачем postgres:
      - .\sql\PostgeeSQL\1_CREATE_USER.sql
-   - под пользователем testdb база данных postgres:
+   - під користувачем testdb база даних postgres:
      - .\sql\PostgeeSQL\2_CREATE_DATABASE.sql
-   - под пользователем testdb база данных testdb:
+   - під користувачем testdb база даних testdb:
      - .\sql\PostgeeSQL\3_CREATE_SCHEMAS.sql
      - .\sql\PostgeeSQL\4_CREATE TABLE AND VIEW.sql
      - .\sql\PostgeeSQL\5_CREATE PROCEDURE.sql
